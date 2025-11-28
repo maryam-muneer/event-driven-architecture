@@ -3,15 +3,21 @@ let inputField = document.getElementById('inputName');
 let bgDiv = document.getElementById('bg');
 
 button.addEventListener('dblclick', function() {
-    console.log("Button was doubbled clicked!");
+    console.log("Button was doubble clicked!");
 });
 inputField.addEventListener('input', function() {
     console.log(inputField.value);
 });
 bgDiv.addEventListener('mouseover', function() {
     bgDiv.style.backgroundColor = "pink";
+
+    bgDiv.addEventListener('mouseout', function() {
+    bgDiv.style.backgroundColor = "white"; 
+});
+
     console.log("Mouse is over the div!");
-});                                                        setTimeout(function() {
+});           
+    setTimeout(function() {
     console.log("3 seconds have passed!");            
 }, 3000);
 //  setInterval(function() {
